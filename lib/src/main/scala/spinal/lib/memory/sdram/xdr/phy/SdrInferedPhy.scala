@@ -35,7 +35,7 @@ case class SdrInferedPhy(sl : SdramLayout) extends Component{
   regs.DQM   := io.ctrl.phases(0).DM(0)
   regs.CASn  := io.ctrl.phases(0).CASn
   regs.CKE   := io.ctrl.phases(0).CKE
-  regs.CSn   := io.ctrl.phases(0).CSn
+  regs.CSn(0) := io.ctrl.phases(0).CSn
   regs.RASn  := io.ctrl.phases(0).RASn
   regs.WEn   := io.ctrl.phases(0).WEn
 
