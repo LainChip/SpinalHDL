@@ -160,8 +160,8 @@ case class SdramCtrl[T <: Data](l : SdramLayout, t : SdramTimings, CAS : Int, co
     val address = new Bundle{
       val column = UInt(l.columnWidth bits)
       val bank   = UInt(l.bankWidth bits)
-      val row    = UInt(l.rowWidth bits)
       val chip   = UInt(l.csAddressWidth bits)
+      val row    = UInt(l.rowWidth bits)
     }
     address.assignFromBits(io.bus.cmd.address.asBits)
 
